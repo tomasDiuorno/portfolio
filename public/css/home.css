@@ -1,44 +1,86 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+/*--------------- NAVBAR ---------------*/
 .navbar{
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 3em;
+    justify-content: space-between;
+    height: 4em;
     width: 100%;
-    padding: 0 15%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #171717;
+    box-shadow: 0 2px 6px rgb(170, 79, 255);
+    font-size: 1em;
 }
-.perfil-img-container{
-    display: block;
-    height: 2em;
-    width: 2em;
-    overflow: hidden;
-    border-radius: 50%;
-}
-.perfil-img-container img{
-    width: 100%;
+a{
+    color: #ffffff;
+    text-decoration: none;
 }
 .navbar ul{
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 25%;
     align-items: center;
-    justify-content: end;
-    gap: 1em;
+    justify-content: space-around;
 }
 .navbar ul li{
     list-style-type: none;
 }
-.navbar ul li a{
-    color: #000000;
-    text-decoration: none;
-    font-size: 1em;
+.neon{
+    color: #ffffff;
+    transition: text-shadow 0.3ms ease, transform .5s ease;
+}
+.neon:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(170, 79, 255, 0.8);
+}
+/*--------------- FIN NAVBAR ---------------*/
+/*--------------- MAIN HOME ---------------*/
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 35, 35);
+}
+.home .banner-main{
+    display: grid;
+    height: 30em;
+    width: 100%;
+    grid-template-columns:2fr 1fr;
+    align-content: center;
+    gap: 1em;
+}
+.home .banner-main .col-uno{
+    width: 100%;
+}
+/*--------------- FIN HOME ---------------*/
+/*--------------- FOOTER ---------------*/
+footer{
+    background-color: #171717;
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    color: #ffffff;
+}
+.perfil-img-container{
+    display: block;
+    height: 10em;
+    width: 10em;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid;
+}
+.perfil-img-container:hover{
+    transform: scale(1.1);
+    transition: transform .5s;
+    box-shadow: 0px 0px 8px rgb(170, 79, 255);
+}
+.perfil-img-container img{
+    width: 100%;
 }
