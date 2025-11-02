@@ -5,8 +5,20 @@
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: var(--primary);
 }
-
+.remark-text{
+    color: var(--secondary);
+    font-weight: bolder;
+}
+.tag{
+    padding: .5em .8em;
+    border: 1px solid var(--secondary);
+    border-radius: 2em;
+    color: var(--secondary);
+    background-color: rgba(170, 70, 220, 0.2);
+    width: fit-content;
+}
 .pad{
-    padding: 0 10%;
+    padding: 0 15%;
 }
