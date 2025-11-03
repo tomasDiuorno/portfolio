@@ -18,6 +18,35 @@
     color: var(--secondary);
     background-color: rgba(170, 70, 220, 0.2);
     width: fit-content;
+    font-size: var(--paragraph);
+    text-transform: uppercase;
+}
+.button{
+    padding: .8em .8em;
+    height: fit-content;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: var(--paragraph);
+    font-weight: 500;
+    border: 1px solid var(--secondary);
+    border-radius: .4em;
+    transition: ease-in 0.2s;
+}
+.primary-button{
+    color: var(--background);
+    background-color: var(--secondary);
+}
+.primary-button:hover{
+    background-color: rgba(201, 58, 255, 0.70);
+    border: 1px solid var(--secondary);
+}
+.secondary-button:hover{
+    background-color: rgba(80, 80, 80, 0.3);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+.deco{
+    color: var(--secondary);
 }
 .pad{
     padding: 0 15%;
