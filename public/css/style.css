@@ -27,7 +27,7 @@
     width: fit-content;
     text-transform: uppercase;
     font-size: var(--paragraph);
-    font-weight: 500;
+    font-weight: 600;
     border: 1px solid var(--secondary);
     border-radius: .4em;
     transition: ease-in 0.2s;

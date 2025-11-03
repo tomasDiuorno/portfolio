@@ -93,7 +93,7 @@ a{
 }
 
 .about-me{
-    height: 100vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -173,6 +173,41 @@ h3{
     transform: scale(1.05);
     filter: brightness(1.4);
     transition: all 0.3s ease;
+}
+
+.skills{
+    height: 50vh;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill-card{
+    padding: 3em 4em;
+    border-radius: 1em;
+    background-color: rgba(89, 89, 89, 0.1);
+    border: 1px solid rgb(89, 89, 89);
+    width: 10em;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .6s ease;
+}
+.skill-card:hover{
+    transform: scale(1.1);
+    box-shadow: inset 0px 0px 1.8em rgba(255, 255, 255, 0.5);
+}
+.skill-card h4{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.skill-img-container{
+    width: 3em;
+}
+.skill-img-container img{
+    width: 100%;
 }
 /*--------------- FIN HOME ---------------*/
 /*--------------- FOOTER ---------------*/
