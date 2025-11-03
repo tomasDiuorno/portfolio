@@ -1,5 +1,5 @@
 :root {
-    --background: #171717;
+    --background: #1b1b1b;
     --primary: #FFFFFF;
     --secondary: #c732ff;
 }
@@ -43,7 +43,6 @@ a{
 .neon{
     padding: .5em .7em;
     border-radius: 0.2em;
-    transition: text-shadow 0.3ms ease, transform .5s ease;
 }
 .neon:hover{
     color: var(--secondary);
@@ -88,10 +87,9 @@ a{
 }
 
 .about-me{
-    height: 70vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
     align-items: center;
 }
 .about-container{
@@ -99,9 +97,69 @@ a{
     flex-direction: column;
     gap: 1em;
 }
+h3{
+    font-weight: 500;
+    font-size: 1.5em;
+}
 .about-me .parragraph-contianer{
     font-size: 1em;
-    font-weight: lighter;
+    font-weight: 200;
+}
+.img-container{
+    justify-self: end;
+    width: 20em;
+    background-color: rgba(89, 89, 89, 0.3);
+    box-shadow: 12px 13px 20px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 2em;
+    padding: 2em;
+}
+.img-container img{
+    width: 100%;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5em;
+    text-align: center;
+}
+.project-card{
+    position: relative;
+    width: 20em;
+    height: 20em;
+    align-self: center;
+    justify-self: center;
+    border-radius: 2em;
+    padding: 0.5em;
+    overflow: hidden;
+    background-color: rgba(89, 89, 89, 0.3);
+    z-index: 1;
+    transition: transform 1s ease;
+}
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--secondary), #ff00dd);
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.4);
+    transition: all 0.3s ease;
 }
 /*--------------- FIN HOME ---------------*/
 /*--------------- FOOTER ---------------*/
