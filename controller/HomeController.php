@@ -21,5 +21,6 @@ class HomeController
         $skillsArray = $this->model->getSkills();
         $data["skills"] = $skillsArray;
         $this->renderer->render("home", $data);
+
     }
 }
