@@ -1,5 +1,4 @@
 <?php
-
 class MustacheRenderer
 {
     private $mustache;

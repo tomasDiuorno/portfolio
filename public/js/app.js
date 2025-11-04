@@ -1,4 +1,4 @@
-const text = "/ tomiDev >"
+const text = "</ tomiDev >"
 const title = document.getElementById("name-logo");
 
 let i = 0;

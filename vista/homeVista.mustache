@@ -24,16 +24,16 @@
         </div>
     </section>
     <section class="skills pad">
-        {{#skills}}
             <div class="skills-container">
+                {{#skills}}
                 <div class="skill-card">
                     <div class="skill-img-container">
-                        <img src="{{image}}"/>
+                        <img src='{{image}}'>
                     </div>
                     <h4>{{title}}</h4>
                 </div>
+                    {{/skills}}
             </div>
-        {{/skills}}
     </section>
     <section class="projects pad">
         <h3><span class="deco">/</span>Projects></h3>
