@@ -24,48 +24,16 @@
         </div>
     </section>
     <section class="skills pad">
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/css3.png">
+        {{#skills}}
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-img-container">
+                    <img src="{{image}}">
+                </div>
+                <h4>{{title}}</h4>
             </div>
-            <h4>css3</h4>
         </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/html5.png">
-            </div>
-            <h4>html5</h4>
-        </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/java.png">
-            </div>
-            <h4>java</h4>
-        </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/js.png">
-            </div>
-            <h4>javascript</h4>
-        </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/php.png">
-            </div>
-            <h4>php</h4>
-        </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/mysql.png">
-            </div>
-            <h4>mysql</h4>
-        </div>
-        <div class="skill-card">
-            <div class="skill-img-container">
-                <img src="public/img/skills/tailwind.png">
-            </div>
-            <h4>tailwind</h4>
-        </div>
+        {{/skills}}
     </section>
     <section class="projects pad">
         <h3><<span class="deco">/</span>Projects></h3>

@@ -18,6 +18,8 @@ class HomeController
 
     private function home()
     {
-        $this->renderer->render("home");
+        $skillsArray = $this->model->getSkills();
+        $data["skills"] = $skillsArray;
+        $this->renderer->render("home", $data);
     }
 }
