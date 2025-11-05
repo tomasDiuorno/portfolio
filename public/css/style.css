@@ -21,6 +21,12 @@
     font-size: var(--paragraph);
     text-transform: uppercase;
 }
+.skill-tag{
+    background-color: rgba(80, 80, 80, 0.3);
+    border: 1px solid var(--secondary);
+    padding: .3em .5em;
+    border-radius: 1em;
+}
 .button{
     padding: .8em .8em;
     height: fit-content;

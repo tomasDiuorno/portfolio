@@ -19,4 +19,8 @@ class Database
 
         return $result;
     }
+
+    public function prepare($sql){
+        return $this->conexion->prepare($sql);
+    }
 }

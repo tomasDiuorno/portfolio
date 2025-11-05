@@ -19,7 +19,30 @@ class PortfolioModel
     }
 
     public function projects(){
-        $query = "SELECT title, description, image, link FROM project";
-        return $this->conexion->query($query);
+        $query = "SELECT * FROM project";
+        $result = $this->conexion->query($query);
+
+        $projects = [];
+        while ($row = $result->fetch_assoc()) {
+            // Trae los skills asociados a este proyecto
+            $projectId = $row['id'];
+            $row['skills'] = $this->projectSkills($projectId);
+            $projects[] = $row;
+        }
+        return $projects;
+    }
+
+    public function projectSkills($projectId){
+        $query = "SELECT s.title FROM skill s JOIN project_skill ps ON ps.skill_id = s.id WHERE ps.project_id = ?";
+        $stmt = $this->conexion->prepare($query);
+        $stmt->bind_param("i", $projectId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $skills = [];
+        while($row = $result->fetch_assoc()){
+            $skills[] = $row['title'];
+        }
+        return $skills;
     }
 }

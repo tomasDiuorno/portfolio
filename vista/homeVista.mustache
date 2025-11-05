@@ -56,7 +56,12 @@
             <div class="project-card">
                 <h4 class="project-title">{{title}}</h4>
                 <p class="project-description">{{description}}</p>
-                <span class="project-skill">hola</span>
+                    <div class="project-skill">
+                    {{#skills}}
+                        <span class="skill-tag">{{.}}</span>
+                    {{/skills}}
+                    </div>
+                <a class="button primary-button" href="{{link}}">View repository</a>
                 <div class="project-img-cont">
                     <img src="{{image}}">
                 </div>
