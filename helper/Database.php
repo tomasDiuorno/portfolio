@@ -10,6 +10,13 @@ class Database
     }
 
     public function query($sql){
-         return $this->conexion->query($sql);
+        $result = $this->conexion->query($sql);
+
+        if (!$result) {
+            echo "Error en la consulta: " . $this->conexion->error;
+            return false;
+        }
+
+        return $result;
     }
 }

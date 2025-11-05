@@ -135,24 +135,28 @@ h3{
     gap: 2em;
 }
 .projects-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 2.5em;
-    text-align: center;
 }
 .project-card{
     position: relative;
-    width: 20em;
+    width: 100%;
     height: 20em;
-    align-self: center;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 2em;
-    padding: 0.5em;
+    padding: 2em;
     overflow: hidden;
     background-color: rgba(89, 89, 89, 0.3);
     z-index: 1;
     transition: transform 1s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr ;
+    grid-template-areas: "title title img"
+                        "desc desc img"
+                        "skill skill img";
 }
 .project-card::before {
     content: "";
@@ -172,6 +176,26 @@ h3{
     transform: scale(1.05);
     filter: brightness(1.4);
     transition: all 0.3s ease;
+}
+.project-title{
+    grid-area: title;
+}
+.project-description{
+    align-self: flex-start;
+    grid-area: desc;
+}
+.project-skill{
+    grid-area: skill;
+}
+.project-img-cont{
+    height: 18em;
+    max-width: 25em;
+    border-radius: 2em;
+    overflow: hidden;
+    grid-area: img;
+}
+.project-img-cont img{
+    height: 100%;
 }
 
 .skills{

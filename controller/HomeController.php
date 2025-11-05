@@ -20,8 +20,11 @@ class HomeController
     {
         $skillsArray = $this->model->skills();
         $technologiesArray = $this->model->technologies();
+        $projectsArray = $this->model->projects();
 
-        $data = ["skills" => $skillsArray, "technologies" => $technologiesArray];
+        $data = ["skills" => $skillsArray,
+            "technologies" => $technologiesArray,
+            "projects" => $projectsArray];
 
         $this->renderer->render("home", $data);
     }

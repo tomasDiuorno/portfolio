@@ -17,4 +17,9 @@ class PortfolioModel
         return $this->conexion->query($query);
 
     }
+
+    public function projects(){
+        $query = "SELECT title, description, image, link FROM project";
+        return $this->conexion->query($query);
+    }
 }
