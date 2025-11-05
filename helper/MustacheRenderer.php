@@ -18,9 +18,10 @@ class MustacheRenderer
     }
 
     public function generateHtml($contentFile, $data = array()) {
-        $contentAsString = file_get_contents(  $this->viewsFolder .'/header.mustache');
-        $contentAsString .= file_get_contents( $contentFile );
-        $contentAsString .= file_get_contents($this->viewsFolder . '/footer.mustache');
-        return $this->mustache->render($contentAsString, $data);
+        $header = file_get_contents(  $this->viewsFolder .'/header.mustache');
+        $main = file_get_contents( $contentFile );
+        $footer = file_get_contents($this->viewsFolder . '/footer.mustache');
+
+        return $this->mustache->render($header . $main . $footer, $data);
     }
 }

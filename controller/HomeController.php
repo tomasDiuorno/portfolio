@@ -18,12 +18,10 @@ class HomeController
 
     private function home()
     {
-        $skillsArray = $this->model->skills() ?? [];
+        $skillsArray = $this->model->skills();
+        $technologiesArray = $this->model->technologies();
 
-        if($skillsArray === null){
-            $skillsArray = [];
-        }
-        $data = ["skills" => $skillsArray];
+        $data = ["skills" => $skillsArray, "technologies" => $technologiesArray];
 
         $this->renderer->render("home", $data);
     }
