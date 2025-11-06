@@ -3,11 +3,15 @@
     --primary: #FFFFFF;
     --secondary: #c732ff;
     --title1: 6em;
-    --title2: 3em;
-    --title3: 2.4em;
+    --title2: 3.5em;
+    --title3: 2.5em;
     --title4: 2em;
     --title5: 1.5em;
     --paragraph: 1em;
+    --pixel:"Jersey 10", sans-serif;
+    --pixel-style: normal;
+    --pixel-weight: lighter;
+    --text-shadow-def: 4px 4px 0px #000000;
 }
 @keyframes wave {
     0%   { transform: rotate(0deg); }
@@ -27,9 +31,25 @@
     justify-content: space-between;
     height: 4em;
     width: 100%;
-    background-color: var(--background);
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: top;
     box-shadow: 0 2px 6px var(--secondary);
     font-size: var(--paragraph);
+}
+.bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    z-index: 0;
+}
+.bar .name-logo,
+.bar .bar-info {
+    position: relative;
+    z-index: 1;
 }
 a{
     color: var(--primary);
@@ -43,6 +63,9 @@ header .bar .bar-info{
     color: var(--primary);
 }
 header .bar .bar-info a{
+    align-items: flex-start;
+    height: 32px;
+    overflow: hidden;
     transition: transform 1s ease;
 }
 header .bar .bar-info a:hover{
@@ -90,10 +113,21 @@ header .bar .bar-info a:hover{
 .title h2{
     color: var(--primary);
     font-size: var(--title2);
+    font-family: var(--pixel);
+    font-weight: var(--pixel-weight);
+    text-shadow: var(--text-shadow-def);
 }
 .title p{
     color: var(--primary);
     font-size: var(--title4);
+    text-shadow: var(--text-shadow-def);
+}
+.welcome{
+    font-size: var(--title4);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-shadow: var(--text-shadow-def);
 }
 .folders-container{
     display: flex;
@@ -114,7 +148,7 @@ header .bar .bar-info a:hover{
     flex-direction: column;
 }
 .folder-container span{
-    text-shadow: 4px 4px 0px #000000;
+    text-shadow: var(--text-shadow-def);
 }
 .folder-container img{
     height: 100%;
@@ -122,7 +156,6 @@ header .bar .bar-info a:hover{
 .folders:hover{
     transform: scale(1.1);
 }
-
 
 .about-me{
     height: 60vh;
@@ -287,5 +320,5 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6em;
+    height: 3em;
 }
