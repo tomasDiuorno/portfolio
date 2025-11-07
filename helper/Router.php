@@ -24,8 +24,8 @@ class Router
         $controller = $this->factory->get($controllerName);
 
         if($controller == null){
-            header("location: /");
-            exit;
+            var_dump($controllerName);
+            var_dump($controller);
         }
 
         return $controller;

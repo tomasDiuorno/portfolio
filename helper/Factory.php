@@ -1,9 +1,9 @@
 <?php
-include_once ("helper/Database.php");
-include_once ("helper/Router.php");
-include_once("model/PortfolioModel.php");
+include_once("helper/Database.php");
+include_once("helper/Router.php");
 include_once("controller/PortfolioController.php");
 include_once("controller/AboutController.php");
+include_once("model/PortfolioModel.php");
 include_once ('vendor/mustache/src/Mustache/Autoloader.php');
 include_once ("helper/MustacheRenderer.php");
 class Factory
@@ -25,12 +25,16 @@ class Factory
         );
         $this->renderer = new MustacheRenderer("vista");
         $this->objetos["router"] = new Router($this, "PortfolioController", "base");
-        $this->objetos["PortfolioController"] = new PortfolioController(new PortfolioModel($this->conexion), $this->renderer);
-        $this->objetos["AboutController"] = new AboutController($this->renderer);
+        $this->objetos["portfoliocontroller"] = new PortfolioController(new PortfolioModel($this->conexion), $this->renderer);
+        $this->objetos["aboutcontroller"] = new AboutController($this->renderer);
     }
 
     public function get($string)
     {
-        return $this->objetos[$string];
+        $string = strtolower($string);
+        if (isset($this->objetos[$string])) {
+            return $this->objetos[$string];
+        }
+        return null;
     }
 }

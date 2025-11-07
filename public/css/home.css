@@ -31,7 +31,7 @@
     justify-content: space-between;
     height: 4em;
     width: 100%;
-    background-image: url('../img/banner.jpg');
+    background-image: url('/public/img/banner.jpg');
     background-size: cover;
     background-position: top;
     box-shadow: 0 2px 6px var(--secondary);
@@ -88,13 +88,13 @@ header .bar .bar-info a:hover{
 .home .banner-main{
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     align-items: center;
     gap: 1em;
     text-align: center;
     justify-content: space-around;
-    background-image: url('../img/banner.jpg');
+    background-image: url('/public/img/banner.jpg');
     background-size: cover;
     background-position: center;
 }
