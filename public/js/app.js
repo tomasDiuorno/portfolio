@@ -7,7 +7,7 @@ const welcome = document.getElementById("welcome");
 
 let iLogo = 0;
 let iWelcome= 0;
-function type(){
+function typeLogo(){
     let finished = true;
 
     if(iLogo < text.logo.length) {
@@ -16,6 +16,14 @@ function type(){
         finished = false;
     }
 
+    if (!finished) {
+        setTimeout(typeLogo, 100);
+    }
+}
+
+function typeWelcome(){
+    let finished = true;
+
     if(iWelcome < text.welcome.length) {
         welcome.textContent += text.welcome.charAt(iWelcome);
         iWelcome++;
@@ -23,7 +31,8 @@ function type(){
     }
 
     if (!finished) {
-        setTimeout(type, 100);
+        setTimeout(typeWelcome, 100);
     }
 }
-type();
+typeLogo();
+typeWelcome();
