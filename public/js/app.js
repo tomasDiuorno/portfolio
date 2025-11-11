@@ -1,38 +1,33 @@
-const text = {
-    logo : "</ tomiDev >",
-    welcome: "Welcome to my Portfolio!"
-};
-const title = document.getElementById("name-logo");
-const welcome = document.getElementById("welcome");
+const texts = ["Welcome to my Portfolio.", "Jr. Fullstack Developer.", "Bienvenidos a mi Portfolio.", "Desarrollador Fullstack Jr."];
+const typingSpeed = 100;
+const erasingSpeed = 60;
+const delayBetween = 1000;
+let textIndex = 0;
+let charIndex = 0;
 
-let iLogo = 0;
-let iWelcome= 0;
-function typeLogo(){
-    let finished = true;
+const welcomeElement = document.getElementById("type-container");
 
-    if(iLogo < text.logo.length) {
-        title.textContent += text.logo.charAt(iLogo);
-        iLogo++;
-        finished = false;
-    }
-
-    if (!finished) {
-        setTimeout(typeLogo, 100);
+function type() {
+    if (charIndex < texts[textIndex].length) {
+        welcomeElement.textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(erase, delayBetween);
     }
 }
 
-function typeWelcome(){
-    let finished = true;
-
-    if(iWelcome < text.welcome.length) {
-        welcome.textContent += text.welcome.charAt(iWelcome);
-        iWelcome++;
-        finished = false;
-    }
-
-    if (!finished) {
-        setTimeout(typeWelcome, 100);
+function erase() {
+    if (charIndex > 0) {
+        welcomeElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+    } else {
+        textIndex = (textIndex + 1) % texts.length; // cambia al siguiente texto
+        setTimeout(type, 500);
     }
 }
-typeLogo();
-typeWelcome();
+
+document.addEventListener("DOMContentLoaded", () => {
+    type();
+});

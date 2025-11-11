@@ -23,18 +23,23 @@
     100% { transform: rotate(0deg); }
 }
 /*--------------- NAVBAR ---------------*/
+nav{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    margin-top: 1em;
+}
 .bar{
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 4em;
-    width: 100%;
     background-image: url('/public/img/banner.jpg');
     background-size: cover;
     background-position: top;
-    box-shadow: 0 2px 6px var(--secondary);
     font-size: var(--paragraph);
 }
 .bar::before {
@@ -45,9 +50,11 @@
     backdrop-filter: blur(1.5px);
     -webkit-backdrop-filter: blur(1.5px);
     z-index: 0;
+    border-radius: 3em;
 }
 .bar .name-logo,
-.bar .bar-info {
+.bar .bar-info,
+.folders-container {
     position: relative;
     z-index: 1;
 }
@@ -69,6 +76,37 @@ header .bar .bar-info a{
     transition: transform 1s ease;
 }
 header .bar .bar-info a:hover{
+    transform: scale(1.1);
+}
+.folders-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    width: fit-content;
+    padding: 2em;
+    border-radius: 2em;
+}
+.folders{
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 250ms ease-in;
+}
+.folder-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: center;
+}
+.folder-container span{
+    text-shadow: var(--text-shadow-def);
+}
+.folder-container img{
+    height: 100%;
+}
+.folders:hover{
     transform: scale(1.1);
 }
 .neon{
@@ -93,7 +131,7 @@ header .bar .bar-info a:hover{
     align-items: center;
     gap: 1em;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
     background-image: url('/public/img/banner.jpg');
     background-size: cover;
     background-position: center;
@@ -128,35 +166,6 @@ header .bar .bar-info a:hover{
     font-weight: 300;
     font-style: normal;
     text-shadow: var(--text-shadow-def);
-}
-.folders-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2em;
-}
-.folders{
-    height: 4em;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    transition: transform 250ms ease-in;
-}
-.folder-container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-self: center;
-}
-.folder-container span{
-    text-shadow: var(--text-shadow-def);
-}
-.folder-container img{
-    height: 100%;
-}
-.folders:hover{
-    transform: scale(1.1);
 }
 
 .about{
