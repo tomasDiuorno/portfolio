@@ -37,7 +37,6 @@ nav{
     align-items: center;
     justify-content: center;
     height: 4em;
-    background-image: url('/public/img/banner.jpg');
     background-size: cover;
     background-position: top;
     font-size: var(--paragraph);
@@ -140,6 +139,7 @@ header .bar .bar-info a:hover{
     display: inline-block;
     transform-origin: 60% 100%;
     animation: wave 3s ease-in-out 1;
+    z-index: 0;
 }
 .title h1{
     background: linear-gradient(to right, rgb(170, 0, 255), rgb(201, 150, 255));
