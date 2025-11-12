@@ -18,21 +18,70 @@
             </a>
         </div>
     </section>
-    <section class="about-me">
-        <div class="about-container">
-            <span class="tag">◉ Available for work</span>
-            <h3><<span class="deco">/</span>About me></h3>
-            <article class="parragraph-contianer">
-                <p>I am a student of the University Technician in <span class="remark-text">Web Development</span> at the National University of La Matanza (UNLaM). <br>I am passionate about creating functional web solutions with a good user experience, applying my knowledge.
-                    <br>I consider myself a proactive, detail-oriented person with a great ability to learn new technologies. I enjoy working as a team and facing challenges that allow me to continue growing as a developer. </p>
-            </article>
-            <div class="buttons">
-                <a href="home/" class="button primary-button">Contact me</a>
-                <a href="/public/cv/CV-Tomas-Diuorno.pdf" download="CV-TomasDiuorno" class="button secondary-button">View resume</a>
+    <section class="about pad" id="about">
+        <div class="about-me">
+            <div class="about-container">
+                <span class="tag">◉ Available for work</span>
+                <h3><<span class="deco">/</span>About me></h3>
+                <article class="parragraph-contianer">
+                    <p>I am a student of the University Technician in <span class="remark-text">Web Development</span> at the National University of La Matanza (UNLaM). <br>I am passionate about creating functional web solutions with a good user experience, applying my knowledge.
+                        <br>I consider myself a proactive, detail-oriented person with a great ability to learn new technologies. I enjoy working as a team and facing challenges that allow me to continue growing as a developer. </p>
+                </article>
+                <div class="buttons">
+                    <a href="home/" class="button primary-button">Contact me</a>
+                    <a href="/public/cv/CV-Tomas-Diuorno.pdf" download="CV-TomasDiuorno" class="button secondary-button">View resume</a>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="/public/img/desarrollo-web-7865771-6308109.png"/>
             </div>
         </div>
-        <div class="img-container">
-            <img src="/public/img/desarrollo-web-7865771-6308109.png"/>
+    </section>
+    <section class="skills pad" id="skills">
+        <h3><<span class="deco">/</span>Skills></h3>
+        <div class="skills-container">
+            {{#skills}}
+                <div class="skill-card">
+                    <div class="skill-img-container">
+                        <img src='/{{image}}'/>
+                    </div>
+                    <h4>{{title}}</h4>
+                </div>
+            {{/skills}}
         </div>
     </section>
+    <section class="skills pad">
+        <h3><<span class="deco">/</span>Technologies></h3>
+        <div class="skills-container">
+            {{#technologies}}
+                <div class="skill-card">
+                    <div class="skill-img-container">
+                        <img src='/{{image}}'/>
+                    </div>
+                    <h4>{{title}}</h4>
+                </div>
+            {{/technologies}}
+        </div>
+    </section>
+    <section class="projects pad" id="projects">
+        <h3><<span class="deco">/</span>Projects></h3>
+        <div class="projects-container">
+            {{#projects}}
+                <div class="project-card">
+                    <h4 class="project-title">{{title}}</h4>
+                    <p class="project-description">{{description}}</p>
+                    <div class="project-skill">
+                        {{#skills}}
+                            <span class="skill-tag">{{.}}</span>
+                        {{/skills}}
+                    </div>
+                    <a class="button primary-button" href="{{link}}">View repository</a>
+                    <div class="project-img-cont">
+                        <img src="/{{image}}">
+                    </div>
+                </div>
+            {{/projects}}
+        </div>
+    </section>
+
 </main>
