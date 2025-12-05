@@ -67,15 +67,17 @@
         <h3><<span class="deco">/</span>Projects></h3>
         <div class="projects-container">
             {{#projects}}
-                <div class="project-card">
-                    <h4 class="project-title">{{title}}</h4>
-                    <p class="project-description">{{description}}</p>
-                    <div class="project-skill">
-                        {{#skills}}
-                            <span class="skill-tag">{{.}}</span>
-                        {{/skills}}
+                <div class="project-row">
+                    <div class="project-info">
+                        <h4 class="project-title">{{title}}</h4>
+                        <p class="project-description">{{description}}</p>
+                        <div class="project-skill">
+                            {{#skills}}
+                                <span class="skill-tag">{{.}}</span>
+                            {{/skills}}
+                        </div>
+                        <a class="button primary-button" href="{{link}}" target="_blank">View project</a>
                     </div>
-                    <a class="button primary-button" href="{{link}}" target="_blank">View project</a>
                     <div class="project-img-cont">
                         <img src="/{{image}}">
                     </div>

@@ -216,74 +216,46 @@ h3{
 .projects{
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 4em;
 }
-.projects-container{
+.project-row{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2.5em;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-.project-card{
-    position: relative;
-    width: 40em;
-    height: 20em;
-    justify-content: center;
-    border-radius: 2em;
-    padding: 2em;
-    overflow: hidden;
-    background-color: rgba(89, 89, 89, 0.3);
-    z-index: 1;
-    transition: transform 1s ease;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 2fr 1fr 1fr ;
-    grid-template-areas: "title img"
-                        "desc img"
-                        "skill img"
-                        "link img";
-}
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(90deg, var(--secondary), #ff00dd);
-    -webkit-mask:
-            linear-gradient(#fff 0 0) content-box,
-            linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    z-index: -1;
-}
-.project-card:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+.project-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 .project-title{
-    grid-area: title;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 .project-description{
-    align-self: flex-start;
-    grid-area: desc;
+    opacity: 0.85;
+    line-height: 1.5;
 }
 .project-skill{
-    grid-area: skill;
     display: flex;
-    gap: 1em;
     flex-wrap: wrap;
-    height: fit-content;
-    padding-bottom: .8em;
+    gap: 0.6em;
+}
+.skill-tag{
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
 }
 .project-img-cont{
-    height: 100%;
-    max-width: 25em;
-    border-radius: 2em;
-    overflow: hidden;
-    grid-area: img;
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .project-img-cont img{
     height: 100%;

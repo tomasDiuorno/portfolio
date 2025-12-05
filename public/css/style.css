@@ -23,10 +23,11 @@
     text-transform: uppercase;
 }
 .skill-tag{
-    background-color: rgba(80, 80, 80, 0.3);
-    border: 1px solid var(--secondary);
-    padding: .3em .5em;
-    border-radius: 1em;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
 }
 .button{
     padding: .8em .8em;
