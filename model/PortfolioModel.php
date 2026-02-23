@@ -15,7 +15,6 @@ class PortfolioModel
     public function technologies(){
         $query = "SELECT title, image FROM technology";
         return $this->conexion->query($query);
-
     }
 
     public function projects(){
@@ -24,7 +23,6 @@ class PortfolioModel
 
         $projects = [];
         while ($row = $result->fetch_assoc()) {
-            // Trae los skills asociados a este proyecto
             $projectId = $row['id'];
             $row['skills'] = $this->projectSkills($projectId);
             $projects[] = $row;

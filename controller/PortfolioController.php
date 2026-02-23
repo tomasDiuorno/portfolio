@@ -18,6 +18,9 @@ class PortfolioController
 
     private function home()
     {
-        $this->renderer->render("home");
+        $data["skills"] = $this->model->skills();
+        $data["technologies"] = $this->model->technologies();
+        $data["projects"] = $this->model->projects();
+        $this->renderer->render("home", $data);
     }
 }
