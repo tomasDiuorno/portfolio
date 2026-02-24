@@ -2,6 +2,7 @@
     "require": {
         "mustache/mustache": "^3.0",
       "ext-mysqli": "*",
-        "phpmailer/phpmailer": "*"
+        "phpmailer/phpmailer": "*",
+        "vlucas/phpdotenv": "*"
     }
 }
