@@ -212,6 +212,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
+    justify-content: space-between;
 }
 
 .skill-module {
