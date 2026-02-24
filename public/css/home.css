@@ -309,3 +309,123 @@ body {
     color: #94a3b8;
     margin-bottom: 1.5rem;
 }
+
+.contact-section {
+    padding: 6rem 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info p {
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+
+.contact-meta span {
+    color: #00ff88;
+}
+
+.contact-form {
+    border: 1px solid #1f2937;
+    padding: 2rem;
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+}
+
+.form-group input,
+.form-group textarea {
+    background: #0f172a;
+    border: 1px solid #1f2937;
+    padding: 0.7rem;
+    border-radius: 4px;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00ff88;
+}
+
+.form-status {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.footer {
+    border-top: 1px solid #1f2937;
+    padding: 4rem 0 2rem 0;
+    margin-top: 6rem;
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-role {
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.footer-availability {
+    color: #00ff88;
+    font-size: 0.85rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #94a3b8;
+}
+
+.footer a {
+    display: block;
+    text-decoration: none;
+    color: #cbd5e1;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.footer a:hover {
+    color: #00ff88;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1f2937;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748b;
+}

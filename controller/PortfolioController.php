@@ -5,6 +5,7 @@ class PortfolioController
     private $model;
 
     private $renderer;
+    private $contactmodel;
 
     public function __construct($model, $renderer)
     {
