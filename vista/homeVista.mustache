@@ -23,7 +23,7 @@
         <div class="container">
 
         <div class="section-header">
-            <p class="section-command">$ cat about.txt</p>
+            <p class="section-command">$ ls about</p>
         </div>
         <div class="about-terminal">
             <div class="about-left">
@@ -95,7 +95,7 @@
         <div class="container">
 
         <div class="section-header">
-            <p class="section-command">$ ls stack/</p>
+            <p class="section-command">$ ls stack</p>
         </div>
         <div class="skills-grid">
             {{#skills}}
@@ -110,19 +110,30 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section class="featured-section" id="projects">
         <div class="container">
+
             <div class="section-header">
-                <p class="section-command">$ ls projects/</p>
+                <p class="section-command">$ ls projects</p>
             </div>
-            {{#projects}}
-                <div class="project">
+
+            <div class="featured-grid">
+                {{#projects}}
+
+                <div class="featured-card">
                     <h3>{{title}}</h3>
-                    <p>{{description}}</p>
-                    {{#skills}}
-                        <span class="tech">{{.}}</span>
-                    {{/skills}}
-                    <div class="project-actions">
+
+                    <p class="featured-desc">
+                        {{description}}
+                    </p>
+
+                    <div class="featured-stack">
+                        {{#skills}}
+                            <span class="tech">{{.}}</span>
+                        {{/skills}}
+                    </div>
+
+                    <div class="featured-actions">
                         <a href="{{link}}"
                            target="_blank"
                            rel="noopener"
@@ -131,7 +142,9 @@
                         </a>
                     </div>
                 </div>
-            {{/projects}}
+
+                {{/projects}}
+            </div>
         </div>
     </section>
 </main>

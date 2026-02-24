@@ -265,3 +265,47 @@ body {
     border-color: #00ff88;
     box-shadow: 0 0 20px rgba(0,255,136,0.2);
 }
+
+.featured-section {
+    padding: 6rem 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.featured-card {
+    border: 1px solid #1f2937;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 2rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.featured-card:hover {
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0,255,136,0.15);
+    transform: translateY(-4px);
+}
+
+.featured-card h3 {
+    font-family: monospace;
+    color: #00ff88;
+    margin-bottom: 1rem;
+}
+
+.featured-desc {
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.featured-stack {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
