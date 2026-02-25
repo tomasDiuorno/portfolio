@@ -4,7 +4,6 @@ include_once("helper/Router.php");
 include_once ("helper/MustacheRenderer.php");
 include_once("model/PortfolioModel.php");
 include_once("service/MailService.php");
-include_once ('vendor/mustache/src/Mustache/Autoloader.php');
 include_once("controller/PortfolioController.php");
 include_once("controller/ContactController.php");
 class Factory

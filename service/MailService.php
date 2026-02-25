@@ -17,19 +17,20 @@ class MailService
             $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
-            $mail->setFrom($email, $name);
+            $mail->setFrom($email, "Portfolio Contact");
+            $mail->addReplyTo($email, $name);
 
-            $mail->addAddress('tom.diuorno99@gmail.com', 'Tomas Diuorno');
+            $mail->addAddress($_ENV["SMTP_USER"], 'Tomas Diuorno');
 
             $mail->isHTML(true);
             $mail->Subject = "Contacto Portfolio - $subject";
 
             $mail->Body = "
-            <h2>$name</h2>
-            <p>$mensaje</p>
-            <br><br>
-            <p>Enviado desde $email.</p>
-        ";
+                <h3>Nuevo mensaje desde el portfolio</h3>
+                <p><strong>Nombre:</strong> $name</p>
+                <p><strong>Email:</strong> $email</p>
+                <p><strong>Mensaje:</strong><br>$mensaje</p>
+            ";
 
             $mail->send();
 
